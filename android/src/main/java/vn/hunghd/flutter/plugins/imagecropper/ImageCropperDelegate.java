@@ -224,6 +224,8 @@ public class ImageCropperDelegate implements PluginRegistry.ActivityResultListen
             return new AspectRatio(null, 16.0f, 9.0f);
         } else if ("9x16".equals(name)) {
             return new AspectRatio(null, 9.0f, 16.0f);
+        } else if ("9x12".equals(name)) {
+            return new AspectRatio(null, 9.0f, 12.0f);
         } else {
             return new AspectRatio(activity.getString(R.string.ucrop_label_original).toUpperCase(),
                     CropImageView.SOURCE_IMAGE_ASPECT_RATIO, 1.0f);

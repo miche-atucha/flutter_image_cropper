@@ -71,6 +71,9 @@
               if ([@"9x16" isEqualToString:name]) {
                   cropViewController.customAspectRatio = CGSizeMake(9.0f, 16.0f);
                   [cropViewController.customAspectRatioName addObject:@"9x16"];
+              } else if ([@"9x12" isEqualToString:name]) {
+                  cropViewController.customAspectRatio = CGSizeMake(9.0f, 12.0f);
+                  [cropViewController.customAspectRatioName addObject:@"9x12"];
               } else {
                   [allowedAspectRatios addObject:@([self parseAspectRatioPresetFromName:preset])];
               }
