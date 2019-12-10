@@ -74,6 +74,7 @@
               } else {
                   [allowedAspectRatios addObject:@([self parseAspectRatioPresetFromName:preset])];
               }
+          }
       }
       cropViewController.allowedAspectRatios = allowedAspectRatios;
 
