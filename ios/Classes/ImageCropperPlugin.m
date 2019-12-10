@@ -68,7 +68,7 @@
       NSMutableArray *allowedAspectRatios = [NSMutableArray new];
       for (NSString *preset in aspectRatioPresets) {
           if (preset) {
-              if ([@"9x12" isEqualToString:name]) {
+              if ([@"9x12" isEqualToString:preset]) {
                   cropViewController.customAspectRatio = CGSizeMake(9.0f, 12.0f);
                   cropViewController.customAspectRatioName = @"9x12";
               } else {
