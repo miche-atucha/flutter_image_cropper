@@ -68,15 +68,7 @@
       NSMutableArray *allowedAspectRatios = [NSMutableArray new];
       for (NSString *preset in aspectRatioPresets) {
           if (preset) {
-              if ([@"9x16" isEqualToString:name]) {
-                  cropViewController.customAspectRatio = CGSizeMake(9.0f, 16.0f);
-                  [cropViewController.customAspectRatioName addObject:@"9x16"];
-              } else if ([@"9x12" isEqualToString:name]) {
-                  cropViewController.customAspectRatio = CGSizeMake(9.0f, 12.0f);
-                  [cropViewController.customAspectRatioName addObject:@"9x12"];
-              } else {
-                  [allowedAspectRatios addObject:@([self parseAspectRatioPresetFromName:preset])];
-              }
+              [allowedAspectRatios addObject:@([self parseAspectRatioPresetFromName:preset])];
           }
       }
       cropViewController.allowedAspectRatios = allowedAspectRatios;
@@ -170,6 +162,8 @@
         return TOCropViewControllerAspectRatioPreset7x5;
     } else if ([@"16x9" isEqualToString:name]) {
         return TOCropViewControllerAspectRatioPreset16x9;
+    } else if ([@"9x12" isEqualToString:name]) {
+        return TOCropViewControllerAspectRatioPreset9x12;
     } else {
         return TOCropViewControllerAspectRatioPresetOriginal;
     }
